@@ -7,7 +7,7 @@ public class Employee {
     int salaryOfEmployee;
     int department;
     static int count;
-    int id;
+    int id=getCount()+1;
 
     public Employee(String firstNameOfEmployee, String middleNameOfEmployee, String lastNameOfEmployee, int salaryOfEmployee, int department) {
         this.firstNameOfEmployee = firstNameOfEmployee;
@@ -56,6 +56,15 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "№ п/п: " + (getCount() + 1) + " | " + "Имя сотрудника: " + firstNameOfEmployee + " |" + " Отчество сотрудника: " + middleNameOfEmployee + " |" + " Фамилия сорудника: " + lastNameOfEmployee + " |" + " ЗП сотрудника " + salaryOfEmployee + " рублей " + "|" + " Отдел сотрудника: " + department;
+        return "№ п/п: " + id + " | " + "Имя сотрудника: " + firstNameOfEmployee + " |" + " Отчество сотрудника: "
+                + middleNameOfEmployee + " |" + " Фамилия сорудника: " + lastNameOfEmployee + " |"
+                + " ЗП сотрудника " + salaryOfEmployee + " рублей " + "|" + " Отдел сотрудника: " + department;
+    }
+
+    public String toString1() {
+        return "№ п/п: " + id + " | " + "Имя сотрудника: " + firstNameOfEmployee + " |" + " Отчество сотрудника: "
+                + middleNameOfEmployee + " |" + " Фамилия сорудника: " + lastNameOfEmployee + " |"
+                + " Проиндексированная ЗП сотрудника " + salaryOfEmployee + " рублей";
+
     }
 }
